@@ -1,21 +1,25 @@
 <ion-header>
-    <ion-toolbar>
-        <ion-buttons slot="start">
-            <ion-menu-button></ion-menu-button>
-          </ion-buttons>
-      <ion-title style="text-align: center" style="color: #D60024">Tambah Pengumuman</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content>
-       <!-- Textarea in an item with a floating label -->
-       <ion-item>
-          <ion-label position="floating">Nama Beasiswa</ion-label>
-          <ion-textarea></ion-textarea>
-        </ion-item>
- 
-  <h4>Unggah Berkas</h4> 
-  <ion-button class="button" >Tambah Pengumuman</ion-button>
-  <p style="color: #E6BA45">format file .pdf</p>
-  </ion-content>
-  <ion-button expand="block" class="kirim">SIMPAN</ion-button>
+  <ion-toolbar class="toolbar">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="1" class="kembali"><a href="../home"><ion-icon name="arrow-round-back"></ion-icon></a></ion-col>
+        <ion-col size="11"><ion-title class="judul">Tambah Pengumuman</ion-title></ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="konten">
+  <ion-item>
+    <ion-label position="floating">Nama Beasiswa</ion-label>
+    <ion-textarea></ion-textarea>
+  </ion-item>
+
+  <div class="unggahBerkas">
+    <p>Unggah Berkas</p>
+    <div class="pilihFile">Pilih file</div>
+    <input type="file" name="berkas">
+  </div>
+</ion-content>
+<ion-button expand="block" class="simpan">SIMPAN</ion-button>
  
