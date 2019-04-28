@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './services/auth-guard.service';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
-  { path: 'home', loadChildren: './home/home.module#HomePageModule' },
+  {
+    path: 'home', loadChildren: './home/home.module#HomePageModule',
+    canActivate: [AuthGuard]
+  },
   { path: 'deskripsi', loadChildren: './deskripsi/deskripsi.module#DeskripsiPageModule' },
   { path: 'pengumuman', loadChildren: './pengumuman/pengumuman.module#PengumumanPageModule' },
   { path: 'profil', loadChildren: './profil/profil.module#ProfilPageModule' },
