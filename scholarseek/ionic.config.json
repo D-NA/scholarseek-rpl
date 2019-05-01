@@ -1,0 +1,7 @@
+{
+  "name": "scholarseek",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
