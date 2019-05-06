@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 08, 2019 at 07:43 AM
+-- Generation Time: May 04, 2019 at 01:49 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -29,12 +29,25 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `mahasiswa` (
-  `username` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `username` varchar(30) NOT NULL,
+  `nama` varchar(30) NOT NULL,
+  `nim` varchar(30) NOT NULL,
+  `ipk` float NOT NULL,
+  `password` varchar(30) NOT NULL,
+  `cpassword` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 COMMIT;
 
+--
+-- Dumping data for table `mahasiswa`
+--
+
+/*INSERT INTO `mahasiswa` (`username`, `nama`, `nim`, `ipk`, `password`, `cpassword`) VALUES
+('dhanu_dwinanda', '', '', 0, 'password4', ''),
+('dhanu_dwinanda', '', '', 0, 'password4', ''),
+('dhanu_dwinanda', '', '', 0, 'password4', '');
+COMMIT;
+*/
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { AuthGuard } from './services/auth-guard.service';
+//import { AuthGuard } from './services/auth-guard.service';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'opening',
     pathMatch: 'full'
   },
   {
     path: 'home', loadChildren: './home/home.module#HomePageModule',
-    canActivate: [AuthGuard]
+    //canActivate: [AuthGuard]
   },
   { path: 'deskripsi', loadChildren: './deskripsi/deskripsi.module#DeskripsiPageModule' },
   { path: 'pengumuman', loadChildren: './pengumuman/pengumuman.module#PengumumanPageModule' },
@@ -24,7 +24,11 @@ const routes: Routes = [
   { path: 'pengumumanadmin', loadChildren: './pengumumanadmin/pengumumanadmin.module#PengumumanadminPageModule' },
   { path: 'tambahbeasiswa', loadChildren: './tambahbeasiswa/tambahbeasiswa.module#TambahbeasiswaPageModule' },
   { path: 'tambahpengumuman', loadChildren: './tambahpengumuman/tambahpengumuman.module#TambahpengumumanPageModule' },
-  { path: 'tjoin', loadChildren: './tjoin/tjoin.module#TjoinPageModule' }
+  { path: 'tjoin', loadChildren: './tjoin/tjoin.module#TjoinPageModule' },
+  { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
+  { path: 'sebagai', loadChildren: './sebagai/sebagai.module#SebagaiPageModule' },
+  { path: 'login-admin', loadChildren: './login-admin/login-admin.module#LoginAdminPageModule' },
+  { path: 'register-admin', loadChildren: './register-admin/register-admin.module#RegisterAdminPageModule' }
 ];
 
 @NgModule({

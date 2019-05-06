@@ -1,7 +1,8 @@
 {
   "name": "scholarseek",
   "integrations": {
-    "cordova": {}
+    "cordova": {},
+    "capacitor": {}
   },
   "type": "angular"
 }
